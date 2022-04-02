@@ -3,7 +3,14 @@
 # uses the speedtest CLI to run a test and either create or append to a csv file
 # if no path is specified on the command line, use a file in the current dir.
 
-OUTPUT_FILE="speedtests.csv"
+OUTPUT_FILE=""
+
+if [ -z "$1" ]
+then
+    OUTPUT_FILE="speedtests.csv"
+else 
+	OUTPUT_FILE="$1"
+fi
 
 
 if [ -f OUTPUT_FILE ]; 
