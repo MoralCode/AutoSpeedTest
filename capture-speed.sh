@@ -15,9 +15,9 @@ fi
 
 if [ -f OUTPUT_FILE ]; 
 then
-	speedtest --progress=no --format=csv >> OUTPUT_FILE
+	speedtest --progress=no --format=csv >> "$OUTPUT_FILE"
 else
-	speedtest --progress=no --output-header --format=csv >> OUTPUT_FILE
+	speedtest --progress=no --output-header --format=csv >> "$OUTPUT_FILE"
 fi
 
 
