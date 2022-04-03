@@ -13,7 +13,7 @@ else
 fi
 
 
-if [ -f OUTPUT_FILE ]; 
+if [ -f "$OUTPUT_FILE" ]; 
 then
 	speedtest --progress=no --format=csv >> "$OUTPUT_FILE"
 else
