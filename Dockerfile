@@ -13,3 +13,5 @@ RUN chmod +x /root/capture-speed.sh
 RUN mkdir /data
 
 RUN echo "59 * * * * root /root/capture-speed.sh /data/speedtest-results.csv >/dev/null 2>&1" >> /etc/crontab
+
+RUN speedtest --accept-license
