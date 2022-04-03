@@ -34,5 +34,5 @@ truncate -s-1 "$OUTPUT_FILE"
 # add the current timestamp	to the end
 # https://timestamp.online/article/how-to-get-current-timestamp-in-bash
 
-echo ",$(date +"%s")" >> "$OUTPUT_FILE"
+echo ",\"$(date +"%s")\"" >> "$OUTPUT_FILE"
 
