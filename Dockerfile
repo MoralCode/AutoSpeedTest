@@ -5,6 +5,7 @@ RUN curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
 # RUN chmod +x ./install.deb.sh && ./install.deb.sh && rm install.deb.sh
 RUN apt-get install -y --no-install-recommends speedtest
 
+RUN speedtest --accept-license
 
 COPY capture-speed.sh /root/
 RUN chmod +x /root/capture-speed.sh
@@ -13,6 +14,5 @@ RUN mkdir /data
 
 RUN echo "59 * * * * root /root/capture-speed.sh /data/speedtest-results.csv >/dev/null 2>&1" >> /etc/crontab
 
-RUN speedtest --accept-license
 
 RUN service cron start
