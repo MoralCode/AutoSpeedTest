@@ -7,3 +7,7 @@ RUN curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
 RUN apt-get install -y --no-install-recommends speedtest
 
 
+COPY capture-speed.sh /root/
+RUN chmod +x /root/capture-speed.sh
+
+RUN mkdir /data
